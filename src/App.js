@@ -20,7 +20,7 @@ const ProfilStack = createStackNavigator();
 function HomeStackScreen({navigation}){
   return(
     <HomeStack.Navigator>
-        <HomeStack.Screen name="Home" component={MainTabScreen} options={{
+        <HomeStack.Screen name="Accueil" component={MainTabScreen} options={{
           headerLeft:()=>(
             <FontAwesome.Button  size={25} name="bars" onPress={()=>{navigation.openDrawer()}}></FontAwesome.Button>
           )
@@ -32,7 +32,7 @@ function HomeStackScreen({navigation}){
 function AdviceStackScreen({navigation}){
   return(
     <AdviceStack.Navigator>
-        <AdviceStack.Screen name="Advices" component={AdviceScreen}  options={{
+        <AdviceStack.Screen name="Conseils" component={AdviceScreen}  options={{
           headerLeft:()=>(
             <FontAwesome.Button  size={25} name="bars" onPress={()=>{navigation.openDrawer()}}></FontAwesome.Button>
           )
@@ -43,7 +43,7 @@ function AdviceStackScreen({navigation}){
 function AnxietyStackScreen({navigation}){
   return(
     <AnxietyStack.Navigator>
-        <AnxietyStack.Screen name="Anxiety" component={AnxietyScreen}  options={{
+        <AnxietyStack.Screen name="Comprendre l'anxiété" component={AnxietyScreen}  options={{
           headerLeft:()=>(
             <FontAwesome.Button  size={25} name="bars" onPress={()=>{navigation.openDrawer()}}></FontAwesome.Button>
           )
@@ -54,7 +54,7 @@ function AnxietyStackScreen({navigation}){
 function BreathingStackScreen({navigation}){
   return(
     <BreathingStack.Navigator>
-        <BreathingStack.Screen name="Breathing" component={BreathingScreen}  options={{
+        <BreathingStack.Screen name="Gérer ma respiration" component={BreathingScreen}  options={{
           headerLeft:()=>(
             <FontAwesome.Button  size={25} name="bars" onPress={()=>{navigation.openDrawer()}}></FontAwesome.Button>
           )
@@ -77,11 +77,11 @@ function ProfilStackScreen({navigation}){
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeStackScreen} />
-        <Drawer.Screen name="Advices" component={AdviceStackScreen} />
-        <Drawer.Screen name="Anxiety" component={AnxietyStackScreen} />
-        <Drawer.Screen name="Breathing" component={BreathingStackScreen} />
+      <Drawer.Navigator initialRouteName="Accueil">
+        <Drawer.Screen name="Accueil" component={HomeStackScreen} />
+        <Drawer.Screen name="Avoir des conseils"  component={AdviceStackScreen} />
+        <Drawer.Screen name="Comprendre l'anxiété" component={AnxietyStackScreen} />
+        <Drawer.Screen name="Gérer ma respiration" component={BreathingStackScreen} />
         <Drawer.Screen name="Profil" component={ProfilStackScreen} /> 
       </Drawer.Navigator>
     </NavigationContainer>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator} from '@react-navigation/stack';
-import { Ionicons,FontAwesome } from '@expo/vector-icons';
+import { Ionicons,FontAwesome,Octicons } from '@expo/vector-icons';
 import HomeScreen from '../Home/index'
 import AdviceScreen from '../Advices';
 import CallScreen from '../Call';
@@ -16,20 +16,20 @@ function MainTabScreen() {
         screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
         let iconName;
-        if (route.name === 'TabA') {
-            iconName = focused
-            ? 'ios-information-circle'
-            : 'ios-information-circle-outline';
-        } else if (route.name === 'TabB') {
-            iconName = focused
-            ? 'ios-list-box'
-            : 'ios-list';
+        if (route.name === 'Home') {
+            iconName = 'ios-home';
+            return <Ionicons name={iconName} size={size} color={color}/>
+        } else if (route.name === 'Advice') {
+            iconName = 'primitive-dot';
+            return <Octicons name={iconName} size={30} color={'tomato'}  />
+        }else if (route.name === 'Call') {
+            iconName = 'ios-call';
+            return <Ionicons name={iconName} size={size} color={color}  />
         }
-        return <Ionicons name={iconName} size={size} color={color}     />;
             },
         })}
         tabBarOptions={{
-        activeTintColor: 'tomato',
+        activeTintColor: 'gray',
         inactiveTintColor: 'gray',
         }}
         >

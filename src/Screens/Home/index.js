@@ -6,18 +6,17 @@ import { createStackNavigator } from '@react-navigation/stack';
 function HomeScreen({navigation}) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Accueil</Text>
         <Button
           title="Avoir des conseils"
-          onPress={() => navigation.navigate('Advices')}>
+          onPress={() => navigation.navigate('Avoir des conseils')}>
         </Button>
         <Button
           title="Comprendre l'anxiété"
-          onPress={() => navigation.navigate('Anxiety')}>
+          onPress={() => navigation.navigate("Comprendre l'anxiété")}>
         </Button>
         <Button
           title="Gérer ma respiration"
-          onPress={() => navigation.navigate('Breathing')}>
+          onPress={() => navigation.navigate('Gérer ma respiration')}>
         </Button>
     </View>
     );
