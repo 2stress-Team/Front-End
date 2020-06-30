@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 function ProfilScreen({route,navigation}){
     return(
-      <View>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>ProfilScreen</Text>
       </View>
     );

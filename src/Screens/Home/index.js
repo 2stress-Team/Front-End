@@ -8,16 +8,16 @@ function HomeScreen({navigation}) {
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Accueil</Text>
         <Button
-          title="Go to Menu"
-          onPress={() => navigation.navigate('Menu')}>
+          title="Avoir des conseils"
+          onPress={() => navigation.navigate('Advices')}>
         </Button>
         <Button
-          title="Go to Breath"
-          onPress={() => navigation.navigate('Breathing')}>
-        </Button>
-        <Button
-          title="Go to Anxiety"
+          title="Comprendre l'anxiété"
           onPress={() => navigation.navigate('Anxiety')}>
+        </Button>
+        <Button
+          title="Gérer ma respiration"
+          onPress={() => navigation.navigate('Breathing')}>
         </Button>
     </View>
     );

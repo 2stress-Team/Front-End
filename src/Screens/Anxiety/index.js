@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 function AnxietyScreen({route,navigation}){
     return(
-      <View>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>AnxietyScreen</Text>
       </View>
     );

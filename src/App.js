@@ -1,29 +1,26 @@
-// In App.js in a new project
-
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
+import { Button, View, Text } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import MenuScreen from './Screens/Menu/index'
+import { NavigationContainer } from '@react-navigation/native';
+import MainTabScreen from './Screens/Tabs/MainTab'
 import BreathingScreen from './Screens/Breathing/index'
 import AdviceScreen from './Screens/Advices/index'
 import ProfilScreen from './Screens/Profil/index'
 import AnxietyScreen from './Screens/Anxiety/index'
-import { FontAwesome  } from '@expo/vector-icons';
-import HomeScreen from './Screens/Home/index'
-
+import { createStackNavigator} from '@react-navigation/stack';
+import { Ionicons,FontAwesome } from '@expo/vector-icons';
 
 const HomeStack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 const AdviceStack = createStackNavigator();
 const AnxietyStack = createStackNavigator();
 const BreathingStack = createStackNavigator();
 const ProfilStack = createStackNavigator();
-const Drawer = createDrawerNavigator();
 
 function HomeStackScreen({navigation}){
   return(
     <HomeStack.Navigator>
-        <HomeStack.Screen name="Home" component={HomeScreen} options={{
+        <HomeStack.Screen name="Home" component={MainTabScreen} options={{
           headerLeft:()=>(
             <FontAwesome.Button  size={25} name="bars" onPress={()=>{navigation.openDrawer()}}></FontAwesome.Button>
           )
@@ -77,7 +74,7 @@ function ProfilStackScreen({navigation}){
     )
 }
 
-function App() {
+export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
@@ -87,10 +84,6 @@ function App() {
         <Drawer.Screen name="Breathing" component={BreathingStackScreen} />
         <Drawer.Screen name="Profil" component={ProfilStackScreen} /> 
       </Drawer.Navigator>
-
     </NavigationContainer>
-  );
+  )
 }
-
-export default App;
-/*        */

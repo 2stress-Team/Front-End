@@ -3,12 +3,12 @@ import { Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-function MenuScreen({route,navigation}){
+function CallScreen({route,navigation}){
     return(
-      <View>
-        <Text>Test Menu</Text>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Test Call</Text>
       </View>
     );
 }
 
-export default MenuScreen;
+export default CallScreen;

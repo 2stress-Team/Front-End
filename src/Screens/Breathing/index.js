@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 function BreathingScreen({route,navigation}){
     return(
-      <View>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Test Breathing</Text>
       </View>
     );
