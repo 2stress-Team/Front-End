@@ -12,7 +12,7 @@ function AnxietyMenuStack({route,navigation}){
   const MyStack = createStackNavigator();
 
   return(
-      <MyStack.Navigator>
+      <MyStack.Navigator initialRouteName="Anxiety">
         <MyStack.Screen name="Anxiety" component={AnxietyMenuScreen} />
         <MyStack.Screen name="Qu’est ce que l'anxiété ?" component={Anxiety} />
         <MyStack.Screen name="Effets physiques et mentaux" component={Effects} />
