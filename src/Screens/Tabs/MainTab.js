@@ -42,44 +42,5 @@ function MainTabScreen() {
 
 
 const Stack = createStackNavigator();
-function TabAScreen() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="TabA Home" component={TabADetailsScreen} />
-      <Stack.Screen name="TabA Details" component={Details} />
-    </Stack.Navigator>
-  );
-}
-function TabADetailsScreen({navigation}) {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center',  alignItems: 'center' }}>
-      <Text>
-        Welcome to TabA page!
-      </Text>
-      <Button 
-      onPress={() => navigation.navigate('TabA Details')}
-      title="Go to TabA Details"
-      />
-    </View>
-  );
-}
-function Details() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center',  alignItems: 'center' }}>
-      <Text>
-        TabA Details here!
-      </Text>
-    </View>
-  );
-}
-function TabBScreen() {
-  return (
-    <View>
-      <Text style={{textAlign: 'center', marginTop: 300}}>
-        Welcome to TabB page!
-      </Text>
-    </View>
-  );
-}
 
 export default MainTabScreen;
