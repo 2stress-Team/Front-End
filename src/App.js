@@ -6,7 +6,7 @@ import MainTabScreen from './Screens/Tabs/MainTab'
 import BreathingScreen from './Screens/Breathing/index'
 import AdviceScreen from './Screens/Advices/index'
 import ProfilScreen from './Screens/Profil/index'
-import AnxietyScreen from './Screens/Anxiety/index'
+import AnxietyMenuStack from './Screens/Anxiety/AnxietyMenuStack'
 import { createStackNavigator} from '@react-navigation/stack';
 import { Ionicons,FontAwesome } from '@expo/vector-icons';
 
@@ -43,7 +43,7 @@ function AdviceStackScreen({navigation}){
 function AnxietyStackScreen({navigation}){
   return(
     <AnxietyStack.Navigator>
-        <AnxietyStack.Screen name="Comprendre l'anxiété" component={AnxietyScreen}  options={{
+        <AnxietyStack.Screen name="Comprendre l'anxiété" component={AnxietyMenuStack}  options={{
           headerLeft:()=>(
             <FontAwesome.Button  size={25} name="bars" onPress={()=>{navigation.openDrawer()}}></FontAwesome.Button>
           )
